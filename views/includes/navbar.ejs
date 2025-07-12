@@ -1,0 +1,39 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/datalist"
+      ><i class="fa-brands fa-airbnb"></i
+      ><span style="color: red; font-size: 30px; font-weight: bold"
+        >airbnb
+      </span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active home" href="/datalist">Homes</a>
+        <a class="nav-link active Expriences" href="/datalist">Expriences</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/datalist/new"><b>Airbnb your home </b> </a>
+
+        <% if(!CurrUser){ %>
+        <a class="nav-link active" href="/signup"><b> Sign Up</b> </a>
+        <a class="nav-link" href="/login"><b>Log In </b> </a>
+        <% } %> <% if(CurrUser){ %>
+        <a class="nav-link" href="/logout"><b>LogOut </b> </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

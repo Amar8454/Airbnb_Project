@@ -1,0 +1,95 @@
+<% layout('/Layout/boilerplate') -%>
+
+<body>
+  <div id="filters">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p class="fillp">Trending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p class="fillp">Bed</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p class="fillp">Amazing pools</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain-city"></i></div>
+      <p class="fillp">Lakefront</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-hexagon-nodes"></i></div>
+      <p class="fillp">Arctic</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-umbrella-beach"></i></div>
+      <p class="fillp">BeachFront</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-hospital"></i></div>
+      <p class="fillp">Hospital</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-tents"></i></div>
+      <p class="fillp">Camping</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-water"></i></div>
+      <p class="fillp">Lake</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-house-user"></i></div>
+      <p class="fillp">Tiny homes</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-igloo"></i></div>
+      <p class="fillp">Domes</p>
+    </div>
+
+    <div id="badge">
+      <div type="button" class="btn-badge position-relative">
+        <i class="fa-solid fa-sliders"></i>
+        Filters
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark"
+        >
+          1
+        </span>
+      </div>
+    </div>
+
+    <div class="para">
+      <i class="fa-solid fa-tag"></i>
+      <span class="pricePara">Price include all fees</span>
+    </div>
+  </div>
+  
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for(let data of allData) { %>
+    <a href="/datalist/<%=data.id %>" class="data-cardLink">
+      <div class="card col datalist-card">
+        <img
+          src="<%=data.image.url  %>"
+          class="card-img-top"
+          alt="datalist-image"
+          style="height: 18rem"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b> <%=data.location %></b>
+            <br />
+            <b style="font-weight: bold; text-decoration: underline">
+              &#8377;<%= data.price ? data.price.toLocaleString('en-IN') : 'N/A'
+              %>
+            </b>
+            / per night
+          </p>
+        </div>
+      </div>
+    </a>
+
+    <% } %>
+  </div>
+</body>
