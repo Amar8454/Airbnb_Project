@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const WrapError = require("../utils/WrapError");
-const { saveRedirectUrl } = require("../middleware.js");
+const WrapError = require("../utils/WrapError.js");
+const { saveRedirectUrl } = require("../../Major_Project/middleware.js");
 const UserListing = require("../controllers/user.js");
 
 router

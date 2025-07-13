@@ -34,10 +34,10 @@ module.exports.LogOutPage = (req, res, next) => {
   });
 };
 
-module.exports.RenderSignupForm =(req, res) => {
+module.exports.RenderSignupForm = (req, res) => {
   res.render("./UserPage/signup");
-}
+};
 
-module.exports.RenderLoginFrom =(req, res) => {
+module.exports.RenderLoginFrom = (req, res) => {
   res.render("./UserPage/login");
-}
+};
