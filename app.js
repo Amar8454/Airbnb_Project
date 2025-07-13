@@ -15,6 +15,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const { MongoClient } = require("mongodb");
 const app = express();
 
 const listingRoutes = require("./routes/listing");
